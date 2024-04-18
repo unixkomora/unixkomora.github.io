@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./static/style.css" />
+        <title>news</title>
+    </head>
+    <body>
+        <div class="header">
+			<a href="/" class="logo">{{.SiteName}}</a>
+			<i>{{.Slogan}}</i>
+            <div class="header-right">
+				<a href="https://github.com/unixkomora" target="_blank">{{.Code}}</a>
+				<a href="https://t.me/linux_ukraine" target="_blank">{{.Telegram}}</a>
+            </div>
+        </div>
+        <div class="subheader">
+			<a class="active" href="/">{{.SubMain}}</a>
+			<a href="/goal">{{.SubGoal}}</a>
+        </div>
+
+        <div class="container">
+            <div class="main">
+				<h1 class="h1-text">{{.SubMain}}</h1>
+				<div class="news-section">
+					<p class="news-title">Test</p>
+					<p class="news-main">Hello, world!</p>
+				</div>
+			</div>
+        </div>
+    </body>
+</html>
