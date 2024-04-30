@@ -27,20 +27,28 @@ func Server() {
 	log.Print(Yellow+"Server started: "+Reset, local, port)
 
 	text := map[string]interface{}{
-		//Tags
-		"Code":     "код",
-		"Telegram": "телеграм",
-		"SubMain":  "головна",
-		"SubGoal":  "мета",
+		// Header
+		"Code":     "Вихідний код",
+		"Telegram": "Телеграм",
+		// SubHeader
+		"SubMain":    "Головна",
+		"SubGoal":    "Мета",
+		"SubContact": "Контакт",
+		"SubLinks":   "Посилання",
 		// Text
 		"SiteName": "Комора Лінуксоїда",
-		"Slogan":   "ok",
+		"Slogan":   "Філософія Linux - 'смійся в обличчя небезпекам'. Упс. Не те. 'Роби це сам'. Так, саме так., - Лінус Торвальдс",
 	}
 
 	loadHtml("", "index", text)
+	loadHtml("goal", "goal", text)
+	loadHtml("contact", "contact", text)
+	loadHtml("links", "links", text)
 
 	log.Print(Yellow + "Loading: " + Reset + "/static/...")
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./web/static"))))
+	log.Print(Yellow + "Loading: " + Reset + "/img/...")
+	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("./web/img"))))
 	log.Print(Yellow + "Server listening on: " + Reset + local + port)
 	log.Fatal(http.ListenAndServe(port, nil))
 }

@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="./static/style.css" />
-        <title>news</title>
+		<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+        <title>Головна</title>
     </head>
     <body>
         <div class="header">
@@ -19,14 +20,30 @@
         <div class="subheader">
 			<a class="active" href="/">{{.SubMain}}</a>
 			<a href="/goal">{{.SubGoal}}</a>
+			<a href="/contact">{{.SubContact}}</a>
+			<a href="/links">{{.SubLinks}}</a>
+			<link rel="import" href="./contact.html">
         </div>
 
         <div class="container">
             <div class="main">
-				<h1 class="h1-text">{{.SubMain}}</h1>
+				<h1 class="h1-text">Вітаю!</h1>
 				<div class="news-section">
-					<p class="news-title">Test</p>
-					<p class="news-main">Hello, world!</p>
+					<p class="news-main">Це офіційний сайт Комори Лінуксоїда, тобто мій. Це буде "дзеркалом" для каналу, 
+					щоб ви могли могли могли слідкувати за контентом у каналі, і не загубити мене, в разі чого. <br> <br>
+
+
+					Попереджений - значить озброєний <br> <br>
+
+					<strong>Я ще змінюватиму дизайн сайту на більш привабливий, і також робитиму сайт більш функціональним.</strong>
+					</p>
+					<div class="curl-check">
+						<h1 class="h1-text">---</h1>
+						<p>Перевірити сайт на працездатність:</p>
+						<code>
+							curl -Is unixkomora.github.io | head -n 1
+						</code>
+					</div>
 				</div>
 			</div>
         </div>
