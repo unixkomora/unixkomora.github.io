@@ -35,6 +35,7 @@ func Server() {
 		"SubGoal":    "Мета",
 		"SubContact": "Контакт",
 		"SubLinks":   "Посилання",
+		"SubDonate":  "Підтримка",
 		// Text
 		"SiteName": "Комора Лінуксоїда",
 		"Slogan":   "Філософія Linux - 'смійся в обличчя небезпекам'. Упс. Не те. 'Роби це сам'. Так, саме так., - Лінус Торвальдс",
@@ -44,6 +45,7 @@ func Server() {
 	loadHtml("goal", "goal", text)
 	loadHtml("contact", "contact", text)
 	loadHtml("links", "links", text)
+	loadHtml("donate", "donate", text)
 
 	log.Print(Yellow + "Loading: " + Reset + "/static/...")
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./web/static"))))
